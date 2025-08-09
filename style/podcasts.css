@@ -211,3 +211,14 @@ header {
 .menu-item:hover {
     color: #1db954;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}

@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.icons {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.container {
+  display: flex;
+}
+
+nav{
+    margin-bottom: 150%;
+}
+
+.sidebar {
+  width: 195px;
+  background-color: #000;
+  padding: 20px;
+  height: 100vh;
+  position: fixed; /* Keeps the sidebar fixed */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it's on top of other content */
+}
+
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.sidebar .legal,
+.sidebar .language {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.sidebar .legal a {
+  display: block;
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+.legal{
+    margin-bottom: 40px;}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between icon and text */
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    color: #1db954;
+}
