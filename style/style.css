@@ -125,5 +125,17 @@ h3{
 }
 
 .legal{
-    margin-bottom: 40px;
+    margin-bottom: 40px;}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between icon and text */
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    color: #1db954;
 }

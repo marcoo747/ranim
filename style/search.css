@@ -119,9 +119,9 @@ nav{
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .logo img {
