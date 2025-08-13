@@ -4,28 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spotify Sign Up</title>
-  <link rel="stylesheet" href="/style/signup.css" />
+<link rel="stylesheet" href="../style/signup.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
   <div class="signup-container">
-    <img src="/imgs/logo_dark.png" alt="Spotify" class="logo" />
+    <img src="../imgs/logo_dark.png" alt="Spotify" class="logo" />
 
     <!-- Continue with Buttons -->
 <button class="btn facebook" onclick="mockLogin('Facebook')">
-  <img src="/imgs/facebook.svg" alt="Facebook" class="icon" />
+  <img src="../imgs/facebook.svg" alt="Facebook" class="icon" />
   Continue with Facebook
 </button>
 
 <button class="btn apple" onclick="mockLogin('Apple')">
-  <img src="/imgs/apple.png" alt="Apple" class="icon" />
+  <img src="../imgs/apple.png" alt="Apple" class="icon" />
   Continue with Apple
 </button>
 
 <button class="btn google" onclick="mockLogin('Google')">
-  <img src="/imgs/google.svg" alt="Google" class="icon" />
+  <img src="../imgs/google.svg" alt="Google" class="icon" />
   Continue with Google
 </button>
 
@@ -45,10 +45,21 @@
         <option value="Canada">Canada</option>
         <option value="India">India</option>
         <option value="Australia">Australia</option>
+        <option value="Australia">Egypt</option>
       </select>
 
-      <input type="password" id="password" placeholder="Password" required />
-      <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+<!-- Password with Show/Hide Toggle -->
+<div class="password-wrapper">
+  <input type="password" id="password" placeholder="Password" required />
+  <span class="toggle-password" id="toggle-password" onclick="togglePassword('password')">👁️</span>
+</div>
+
+<!-- Confirm Password with Show/Hide Toggle -->
+<div class="password-wrapper">
+  <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+  <span class="toggle-password" id="toggle-confirm-password" onclick="togglePassword('confirmPassword')">👁️</span>
+</div>
+
 
       <div class="file-input-wrapper">
         <!-- Hidden file input -->
@@ -69,6 +80,6 @@
     </div>
   </div>
 
-  <script src="/js/signup.js"></script>
+  <script src="../js/signup.js"></script>
 </body>
 </html>

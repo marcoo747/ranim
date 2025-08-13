@@ -163,3 +163,36 @@ body {
   width: 18px;
   height: 18px;
 }
+
+/* Style for the password input wrapper */
+.password-wrapper {
+  position: relative;
+}
+
+/* Style for the password input field */
+.password-wrapper input[type="password"],
+.password-wrapper input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  padding-right: 35px; /* Make space for the icon */
+  margin-bottom: 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Styling for the toggle password icon */
+.password-wrapper .toggle-password {
+  position: absolute;
+  right: 10px; /* Align to the right side */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Hover effect for the eye icon */
+.password-wrapper .toggle-password:hover {
+  color: #1db954; /* Change to green on hover */
+}
