@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Sign Up</title>
+  <link rel="stylesheet" href="/style/signup.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="signup-container">
+    <img src="/imgs/logo_dark.png" alt="Spotify" class="logo" />
+
+    <!-- Continue with Buttons -->
+<button class="btn facebook" onclick="mockLogin('Facebook')">
+  <img src="/imgs/facebook.svg" alt="Facebook" class="icon" />
+  Continue with Facebook
+</button>
+
+<button class="btn apple" onclick="mockLogin('Apple')">
+  <img src="/imgs/apple.png" alt="Apple" class="icon" />
+  Continue with Apple
+</button>
+
+<button class="btn google" onclick="mockLogin('Google')">
+  <img src="/imgs/google.svg" alt="Google" class="icon" />
+  Continue with Google
+</button>
+
+    <div class="divider"><span>OR</span></div>
+    <!-- Regular Sign-Up Form -->
+    <form class="signup-form">
+      <input type="text" id="fullName" placeholder="Full Name" required />
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="tel" id="phone" placeholder="Phone Number (Optional)" />
+      <input type="date" id="dob" required />
+      
+      <select id="country" required>
+        <option value="">Select your country</option>
+        <option value="USA">United States</option>
+        <option value="UK">United Kingdom</option>
+        <option value="Canada">Canada</option>
+        <option value="India">India</option>
+        <option value="Australia">Australia</option>
+      </select>
+
+      <input type="password" id="password" placeholder="Password" required />
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+
+      <div class="file-input-wrapper">
+        <!-- Hidden file input -->
+        <input type="file" id="photo" accept="image/*" onchange="updateFileName()" />
+        <!-- Custom button text, click this to trigger the file input -->
+        <span class="file-input-text" onclick="document.getElementById('photo').click()">Profile Photo (Optional)</span>
+      </div>
+
+      <button type="submit" class="signup-btn">Sign Up</button>
+    </form>
+
+
+
+    <!-- Log In Link -->
+    <div class="login-section">
+      <p>Already have an account?</p>
+      <a href="login.html" class="login-btn">Log in</a>
+    </div>
+  </div>
+
+  <script src="/js/signup.js"></script>
+</body>
+</html>

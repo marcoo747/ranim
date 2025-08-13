@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container {
+  width: 350px;
+  padding: 30px;
+  text-align: center;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 30px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form input,
+.signup-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.signup-form input[type="file"] {
+  margin-bottom: 20px;
+}
+
+.signup-btn {
+  background-color: #1db954;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.signup-btn:hover {
+  background-color: #1ed760;
+}
+
+.social-login {
+  margin-top: 20px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.facebook {
+  background-color: #1877f2;
+  color: white;
+}
+
+.apple {
+  background-color: black;
+  color: white;
+}
+
+.google {
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #444;
+}
+
+.login-section {
+  margin-top: 20px;
+}
+
+.login-btn {
+  font-size: 14px;
+  text-decoration: none;
+  color: #1db954;
+  font-weight: bold;
+}
+
+.login-btn:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #999;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divider:not(:empty)::before {
+  margin-right: .5em;
+}
+
+.divider:not(:empty)::after {
+  margin-left: .5em;
+}
+
+/* Style the label for profile photo */
+label[for="photo"] {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.file-input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+input[type="file"] {
+  display: none; /* Hide the default file input */
+}
+
+.file-input-text {
+  display: block;
+  background-color: #f1f1f1;
+  color: #444;
+  padding: 12px;
+  border-radius: 25px;
+  text-align: center;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.file-input-text:hover {
+  background-color: #f0f0f0;
+}
+
+input[type="file"]:focus + .file-input-text {
+  outline: 2px solid #1db954;
+}
+
+input[type="file"]:valid + .file-input-text {
+  color: #1db954;
+  background-color: #e0ffe1;
+}
+
+input[type="file"]:invalid + .file-input-text {
+  color: #f44336;
+  background-color: #ffefef;
+}

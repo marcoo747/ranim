@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Login</title>
+  <link rel="stylesheet" href="/style/login.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="login-container">
+    <img src="/imgs/logo_dark.png" alt="Spotify" class="logo" />
+
+<button class="btn facebook" onclick="mockLogin('Facebook')">
+  <img src="/imgs/facebook.svg" alt="Facebook" class="icon" />
+  Continue with Facebook
+</button>
+
+<button class="btn apple" onclick="mockLogin('Apple')">
+  <img src="/imgs/apple.png" alt="Apple" class="icon" />
+  Continue with Apple
+</button>
+
+<button class="btn google" onclick="mockLogin('Google')">
+  <img src="/imgs/google.svg" alt="Google" class="icon" />
+  Continue with Google
+</button>
+
+
+    <div class="divider"><span>OR</span></div>
+
+    <form class="login-form">
+      <label>Email address or username</label>
+      <input type="text" placeholder="Email address or username" required />
+
+      <label>Password</label>
+      <div class="password-wrapper">
+        <input type="password" placeholder="Password" required />
+        <span class="toggle-password">👁️</span>
+      </div>
+
+      <a href="#" class="forgot">Forgot your password?</a>
+
+      <div class="remember">
+        <input type="checkbox" checked />
+        <label>Remember me</label>
+      </div>
+
+      <button type="submit" class="login-btn">LOG IN</button>
+    </form>
+
+    <div class="signup-section">
+      <p>Don't have an account?</p>
+      <a href="signup.html" class="signup-btn">Sign up for Spotify</a>
+    </div>
+  </div>
+  <script src="/js/login.js"></script>
+</body>
+</html>
