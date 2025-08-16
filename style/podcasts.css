@@ -95,7 +95,6 @@ nav{
 .main-content {
   flex: 1;
   padding: 20px 40px;
-  background: linear-gradient(#222, #111);
   overflow-y: auto;
   margin-left: 220px; /* Adjust for sidebar width */
 }

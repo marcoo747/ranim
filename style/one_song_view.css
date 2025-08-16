@@ -119,8 +119,12 @@ nav{
 }
 
 .audio-container {
-  width: 90%;
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .player-controls {
@@ -138,15 +142,19 @@ nav{
 }
 
 .timeline-container {
-  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 10px;
+
 }
 
 #currentTime,
 #duration {
-  width: 1px;
+  width: 40px;
   text-align: center;
   font-weight: bold;
 }
@@ -158,7 +166,6 @@ nav{
   position: relative;
   cursor: pointer;
   border-radius: 3px;
-  margin-left: 10%;
 }
 
 #progress {
@@ -166,4 +173,191 @@ nav{
   width: 0%;
   background-color: #7e56f1;
   border-radius: 3px;
+}
+
+.download-button {
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.icon-img {
+  width: 30px;
+  height: 30px;
+  transition: 0.2s ease;
+}
+
+.icon-img:hover {
+  filter: invert(53%) sepia(75%) saturate(636%) hue-rotate(221deg) brightness(97%) contrast(93%);
+}
+
+.optioos {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.modal {
+  display:block;
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7%;
+  border-radius: 12px;
+}
+
+.modal-content {
+  background: #181818;
+  color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  width: 100%; /* Makes sure content adapts to the width */
+  max-width: 400px; /* Ensures the modal has a max width */
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  
+}
+
+.icon a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.icon a:hover {
+  transform: scale(1.1);
+  color: #7e56f1;
+}
+
+#whatsapp::before {
+  background-image: url('../imgs/whatsapp-icon.png');
+}
+
+#facebook::before {
+  background-image: url('../imgs/facebook-icon.png');
+}
+
+#x-twitter::before {
+  background-image: url('../imgs/twitter-icon.png');
+}
+
+#telegram::before {
+  background-image: url('../imgs/telegram-icon.png');
+}
+
+.copy-url {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2c2c2c;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.copy-url input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.copy-url button {
+  background: #7e56f1;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.copy-url button:hover {
+  background: #a28bfa;
+}
+
+.invert-color {
+  filter: invert(1);
+  margin-bottom: 10px;
+  width: 40px;
+}
+
+.invert-color a:hover {
+color: #a28bfa;
+}
+
+#shareModal {
+  display: none; /* Initially hidden */
+}
+
+.lyrics-container {
+  width: 100%;   
+  max-width: 1100px;     /* Take up the full width */
+  height: 600px;      /* Fixed height for the scrollable area */
+  overflow-y: auto;   /* Enable vertical scrolling */
+  padding: 20px;
+  background-color: #333;  /* Dark background like in the screenshot */
+  color: white;       /* White text color */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Optional styling */
+  font-size: 18px;    /* Adjust font size as needed */
+  line-height: 1.6;   /* Line spacing for better readability */
+  margin-top: 50px;
+  margin-left: 4.8%;
+  justify-content: center;
+  direction: rtl; /* Right-to-left text direction */
+  font-size: 50px;
+}
+
+.lyrics-container::-webkit-scrollbar {
+  width: 0px;  /* Set width to 0 to hide it */
+  height: 0px; /* Set height to 0 for horizontal scrollbar if needed */
+}
+
+.lyrics-container::-webkit-scrollbar-track {
+  background: transparent;  /* Make the track transparent */
+}
+
+.lyrics-container::-webkit-scrollbar-thumb {
+  background: transparent;  /* Make the thumb transparent */
 }

@@ -71,3 +71,44 @@ audio.addEventListener('ended', () => {
   showPlayIcon();
   isPlaying = false;
 });
+
+const shareBtn = document.getElementById("shareBtn");
+const modal = document.getElementById("shareModal");
+const closeBtn = document.querySelector(".close");
+
+// When the share button is clicked, show the modal
+shareBtn.onclick = () => {
+  const url = window.location.href;
+  document.getElementById("shareURL").value = url;
+
+  // Set share URLs for WhatsApp, Facebook, Twitter, and Telegram
+  document.getElementById("whatsapp").href = `https://wa.me/?text=${encodeURIComponent(url)}`;
+  document.getElementById("facebook").href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+  document.getElementById("x-twitter").href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}`;
+  document.getElementById("telegram").href = `https://t.me/share/url?url=${encodeURIComponent(url)}`;
+
+  // Display the modal
+  modal.style.display = "flex"; // This will make the modal visible
+};
+
+// Close the modal when the close button (×) is clicked
+closeBtn.onclick = () => {
+  modal.style.display = "none"; // This will hide the modal
+};
+
+// Close the modal if the user clicks outside of it
+window.onclick = (e) => {
+  if (e.target == modal) {
+    modal.style.display = "none"; // This will hide the modal
+  }
+};
+
+// Copy URL to clipboard when "Copy" button is clicked
+document.getElementById("copyBtn").onclick = () => {
+  const shareURL = document.getElementById("shareURL");
+  shareURL.select();
+  navigator.clipboard.writeText(shareURL.value);
+  document.getElementById("copyBtn").textContent = "Copied!";
+  setTimeout(() => document.getElementById("copyBtn").textContent = "Copy", 2000);
+};
+
