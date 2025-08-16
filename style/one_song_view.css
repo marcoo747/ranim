@@ -84,5 +84,86 @@ nav{
 }
 
 .menu-item:hover {
-    color: #1db954;
+    color: #7e56f1; /* Change color on hover */
+}
+.main-content {
+  margin-left: 15.0%; /* Adjust based on sidebar width */
+  padding: 20px;
+  flex-grow: 1; /* Allows the main content to take up remaining space */
+}
+
+.song-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.song-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.song-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.song-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #7e56f1;
+}
+
+.audio-container {
+  width: 90%;
+  max-width: 600px;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#playPauseBtn {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.timeline-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#currentTime,
+#duration {
+  width: 1px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#timeline {
+  flex: 1;
+  height: 6px;
+  background-color: #444;
+  position: relative;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 10%;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background-color: #7e56f1;
+  border-radius: 3px;
 }

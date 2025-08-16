@@ -3,11 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>side bar</title>
-  <link rel="stylesheet" href="../style/one_song_view.cssgit add .
-git commit -m "شرح التعديل"
-git push origin main
-">
+  <title>song name</title>
+  <link rel="stylesheet" href="../style/one_song_view.css">
 </head>
 <body>
   <div class="container">
@@ -39,6 +36,40 @@ git push origin main
         🌐 English
       </div>
     </aside>
+    <!-- Main content -->
+    <div class="main-content">
+      <div class="song-view">
+        <div class="song-info">
+          <img src="../imgs/klb daod.jpg" alt="Song Image" class="song-img">
+          <h2 class="song-title">كان اصغر راعي دائود</h2>
+        </div>
+      </div>
+  <div class="audio-container">
+    <audio id="audio" src="../audio/كارتون كان اصغر راعي داود - الحیاة الأفضل اطفال  Kan Asghar Ra'e Dawoud -  ترنيمة داود وجليات.mp3"></audio>
+
+    <!-- Timeline -->
+    <div class="timeline-container">
+      <span id="currentTime">0:00</span>
+      <div id="timeline">
+        <div id="progress"></div>
+      </div>
+      <span id="duration">0:00</span>
+    </div>
+
+    <!-- Play/Pause Button -->
+    <button id="playPauseBtn" aria-label="Play/Pause">
+      <!-- Play Icon SVG -->
+      <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 24 24" fill="white">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+      <!-- Pause Icon SVG (hidden initially) -->
+      <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 24 24" fill="white" style="display: none;">
+        <path d="M6 19h4V5H6zm8-14v14h4V5h-4z"/>
+      </svg>
+    </button>
   </div>
+    </div>
+  </div>
+  <script src="../js/one_song_view.js"></script>
 </body>
 </html>
