@@ -1,0 +1,387 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.icons {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.container {
+  display: flex;
+}
+
+nav{
+    margin-bottom: 150%;
+}
+
+.sidebar {
+  width: 12.7%;
+  background-color: #000;
+  padding: 20px;
+  height: 100vh;
+  position: fixed; /* Keeps the sidebar fixed */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it's on top of other content */
+  color: white;
+
+}
+
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.sidebar .legal,
+.sidebar .language {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.sidebar .legal a {
+  display: block;
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+.legal{
+    margin-bottom: 40px;}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between icon and text */
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    color: #7e56f1; /* Change color on hover */
+}
+.main-content {
+  margin-left: 15.0%; /* Adjust based on sidebar width */
+  padding: 20px;
+  flex-grow: 1; /* Allows the main content to take up remaining space */
+}
+
+.song-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.song-info {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: -50px;
+}
+
+.song-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.song-img {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #7e56f1;
+}
+
+.audio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#playPauseBtn {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.timeline-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 10px;
+
+}
+
+#currentTime,
+#duration {
+  width: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#timeline {
+  flex: 1;
+  height: 6px;
+  background-color: #444;
+  position: relative;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background-color: #7e56f1;
+  border-radius: 3px;
+}
+
+.download-button {
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.icon-img {
+  width: 30px;
+  height: 30px;
+  transition: 0.2s ease;
+}
+
+.icon-img:hover {
+  filter: invert(53%) sepia(75%) saturate(636%) hue-rotate(221deg) brightness(97%) contrast(93%);
+}
+
+.optioos {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.modal {
+  display:block;
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7%;
+  border-radius: 12px;
+}
+
+.modal-content {
+  background: #181818;
+  color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  width: 100%; /* Makes sure content adapts to the width */
+  max-width: 400px; /* Ensures the modal has a max width */
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  
+}
+
+.icon a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.icon a:hover {
+  transform: scale(1.1);
+  color: #7e56f1;
+}
+
+#whatsapp::before {
+  background-image: url('../imgs/whatsapp-icon.png');
+}
+
+#facebook::before {
+  background-image: url('../imgs/facebook-icon.png');
+}
+
+#x-twitter::before {
+  background-image: url('../imgs/twitter-icon.png');
+}
+
+#telegram::before {
+  background-image: url('../imgs/telegram-icon.png');
+}
+
+.copy-url {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2c2c2c;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.copy-url input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.copy-url button {
+  background: #7e56f1;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.copy-url button:hover {
+  background: #a28bfa;
+}
+
+.invert-color {
+  filter: invert(1);
+  margin-bottom: 10px;
+  width: 40px;
+}
+
+.invert-color a:hover {
+color: #a28bfa;
+}
+
+#shareModal {
+  display: none; /* Initially hidden */
+}
+
+
+.credits-container {
+  background-color: #181818;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: 80%;  /* Adjust the width as needed */
+  max-width: 1100px; 
+  margin: 0 auto; /* Centers the container */
+  margin-top: 20px; /* Adds some space above the credits section */
+}
+
+.credits-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.credit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.artist-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.role {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.follow-btn {
+  background-color: #7e56f1;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.follow-btn:hover {
+  background-color: #6a46c9;
+}
+
+.credit-item:last-child {
+  margin-bottom: 0;
+}

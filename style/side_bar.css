@@ -20,7 +20,7 @@ nav{
 }
 
 .sidebar {
-  width: 195px;
+  width: 12.7%;
   background-color: #000;
   padding: 20px;
   height: 100vh;
@@ -85,4 +85,10 @@ nav{
 
 .menu-item:hover {
     color: #1db954;
+}
+
+.main-content {
+  margin-left: 12.7%; /* Adjust based on sidebar width */
+  padding: 20px;
+  flex-grow: 1; /* Allows the main content to take up remaining space */
 }

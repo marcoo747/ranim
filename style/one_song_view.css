@@ -20,7 +20,7 @@ nav{
 }
 
 .sidebar {
-  width: 195px;
+  width: 12.7%;
   background-color: #000;
   padding: 20px;
   height: 100vh;
@@ -28,6 +28,8 @@ nav{
   top: 0;
   left: 0;
   z-index: 1000; /* Ensure it's on top of other content */
+  color: white;
+
 }
 
 
@@ -103,6 +105,7 @@ nav{
 .song-info {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: -50px;
 }
 
 .song-title {
@@ -331,22 +334,21 @@ color: #a28bfa;
 }
 
 .lyrics-container {
-  width: 100%;   
-  max-width: 1100px;     /* Take up the full width */
-  height: 600px;      /* Fixed height for the scrollable area */
-  overflow-y: auto;   /* Enable vertical scrolling */
+  width: 80%;  /* Adjust the width as needed */
+  max-width: 1100px;     /* You can keep this to ensure it doesn't get too wide */
+  height: 600px;         /* You can adjust the height as needed */
+  overflow-y: auto;      /* Enable scrolling if lyrics overflow */
   padding: 20px;
-  background-color: #333;  /* Dark background like in the screenshot */
-  color: white;       /* White text color */
+  background-color: #333;  
+  color: white;       
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Optional styling */
-  font-size: 18px;    /* Adjust font size as needed */
-  line-height: 1.6;   /* Line spacing for better readability */
-  margin-top: 50px;
-  margin-left: 4.8%;
-  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+  font-size: 18px;
+  line-height: 1.6;      
   direction: rtl; /* Right-to-left text direction */
   font-size: 50px;
+  margin: 50px auto;     /* This will center it horizontally and add some top margin */
+  display: block;        /* Ensures it behaves like a block element */
 }
 
 .lyrics-container::-webkit-scrollbar {
@@ -360,4 +362,56 @@ color: #a28bfa;
 
 .lyrics-container::-webkit-scrollbar-thumb {
   background: transparent;  /* Make the thumb transparent */
+}
+
+.credits-container {
+  background-color: #181818;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: 80%;  /* Adjust the width as needed */
+  max-width: 1100px; 
+  margin: 0 auto; /* Centers the container */
+  margin-top: -20px; /* Adds some space above the credits section */
+}
+
+.credits-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.credit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.artist-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.role {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.follow-btn {
+  background-color: #7e56f1;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.follow-btn:hover {
+  background-color: #6a46c9;
+}
+
+.credit-item:last-child {
+  margin-bottom: 0;
 }

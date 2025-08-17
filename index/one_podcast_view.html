@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>podcast name</title>
+  <link rel="stylesheet" href="../style/one_podcast_view.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="../imgs/logo.png" alt="Ranim Logo" />
+        </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="menu-item"><img src="../imgs/image (2).png" class="icons"><span>Home</span></a></li>
+          <li><a href="search.html" class="menu-item"><img src="../imgs/search.png" class="icons"><span>search</span></a></li>
+          <li><a href="library.html" class="menu-item"><img src="../imgs/liberary.png" class="icons"><span>library</span></a></li>
+          <li><a href="notifications.html" class="menu-item"><img src="../imgs/bell-fill.png" class="icons"><span>notifications</span></a></li>
+        </ul>
+        <ul>
+          <li><img src="../imgs/add.png" alt="" class="icons"> Create Playlist</li>
+          <li><img src="../imgs/heart-fill.png" alt="" class="icons"> Liked Songs</li>
+        </ul>
+      </nav>
+      <div class="legal">
+        <a href="#">Legal</a>
+        <a href="#">Privacy Center</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookies</a>
+        <a href="#">About Ads</a>
+      </div>
+      <div class="language">
+        🌐 English
+      </div>
+    </aside>
+    <!-- Main content -->
+    <div class="main-content">
+      <div class="song-view">
+        <div class="song-info">
+          <img src="../imgs/hqdefault.avif" alt="Song Image" class="song-img">
+          <h2 class="song-title">إتبعني و لا تخف - عظة (15) من مؤتمر المحبة تستر 2025</h2>
+        </div>
+      </div>
+  <div class="audio-container">
+    <audio id="audio" src="../audio/إتبعني و لا تخف - عظة (15) من مؤتمر المحبة تستر 2025 - أبونا داود لمعي.mp3"></audio>
+
+    <!-- Timeline -->
+    <div class="timeline-container">
+      <span id="currentTime">0:00</span>
+      <div id="timeline">
+        <div id="progress"></div>
+      </div>
+      <span id="duration">0:00</span>
+    </div>
+
+    <!-- Play/Pause Button -->
+    <button id="playPauseBtn" aria-label="Play/Pause">
+      <!-- Play Icon SVG -->
+      <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 24 24" fill="white">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+      <!-- Pause Icon SVG (hidden initially) -->
+      <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 24 24" fill="white" style="display: none;">
+        <path d="M6 19h4V5H6zm8-14v14h4V5h-4z"/>
+      </svg>
+    </button>
+  </div>
+  <div class="optioos">
+    <a id="downloadBtn" href="../audio/إتبعني و لا تخف - عظة (15) من مؤتمر المحبة تستر 2025 - أبونا داود لمعي.mp3" download class="download-button" aria-label="Download Song">
+      <img src="../imgs/download.png" alt="Download Icon" class="icon-img">
+    </a>
+  
+    <img src="../imgs/share.png" id="shareBtn" class="icon-img" alt="share">
+    <img src="../imgs/block.png" class="icon-img" alt="block">
+    <img src="../imgs/report.png" class="icon-img" alt="report">
+
+    <div id="shareModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Share this page</h2>
+
+        <div class="icon">
+          <a id="whatsapp" target="_blank">
+            <img src="../imgs/whatsapp.svg" alt="WhatsApp" class="invert-color"/>
+            WhatsApp
+          </a>
+          <a id="facebook" target="_blank">
+            <img src="../imgs/facebook.svg" alt="Facebook" class="invert-color" />
+            Facebook
+          </a>
+          <a id="x-twitter" target="_blank">
+            <img src="../imgs/twitter-x.svg" alt="Twitter" class="invert-color" />
+            Twitter
+          </a>
+          <a id="telegram" target="_blank">
+            <img src="../imgs/telegram.svg" alt="Telegram" class="invert-color" />
+            Telegram
+          </a>
+        </div>
+
+        <div class="copy-url">
+          <input type="text" id="shareURL" readonly>
+          <button id="copyBtn">Copy</button>
+        </div>
+      </div>
+    </div>
+ </div>
+      <div class="credits-container">
+        <h3 class="credits-title">Credits</h3>
+        <div class="credit-item">
+          <p class="artist-name">أبونا داود لمعي</p>
+          <p class="role">The preacher</p>
+          <button class="follow-btn">Following</button>
+        </div>
+      </div>
+  </div>
+  <script src="../js/one_song_view.js"></script>
+</body>
+</html>
