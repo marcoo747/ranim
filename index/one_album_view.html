@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>playlist name</title>
+  <link rel="stylesheet" href="../style/one_album_view.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="../imgs/logo.png" alt="Ranim Logo" />
+        </div>  
+      <nav>
+        <ul>
+          <li><a href="index.html" class="menu-item"><img src="../imgs/image (2).png" class="icons"><span>Home</span></a></li>
+          <li><a href="search.html" class="menu-item"><img src="../imgs/search.png" class="icons"><span>search</span></a></li>
+          <li><a href="library.html" class="menu-item"><img src="../imgs/liberary.png" class="icons"><span>library</span></a></li>
+          <li><a href="notifications.html" class="menu-item"><img src="../imgs/bell-fill.png" class="icons"><span>notifications</span></a></li>
+        </ul>
+        <ul>
+          <li><img src="../imgs/add.png" alt="" class="icons"> Create Playlist</li>
+          <li><img src="../imgs/heart-fill.png" alt="" class="icons"> Liked Songs</li>
+        </ul>
+      </nav>
+      <div class="legal">
+        <a href="#">Legal</a>
+        <a href="#">Privacy Center</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookies</a>
+        <a href="#">About Ads</a>
+      </div>
+      <div class="language">
+        🌐 English
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div class="main-content">
+      <div class="playlist-header">
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=60" alt="Playlist Cover" class="playlist-cover">
+        <div class="playlist-info">
+          <span class="playlist-type">Playlist</span>
+          <h1 class="playlist-title">My Favorite Vibes</h1>
+          <p class="playlist-desc">A collection of go‑to tracks for study, work, and chill.</p>
+          <div class="playlist-meta">
+            <img src="../imgs/logo.png" class="creator-img" alt="Creator">
+            <span class="creator-name">Ranim</span>
+            • <span class="song-count" id="song-count">0 songs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="playlist-controls">
+        <img
+          id="play-pause"
+          class="control-icon clickable"
+          alt="Play"
+          title="Play/Pause"
+          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%231db954'/><polygon points='26,20 26,44 46,32' fill='%23ffffff'/></svg>"
+        />
+        <img
+          id="shuffle-toggle"
+          class="control-icon clickable"
+          alt="Order"
+          title="Shuffle/Order"
+          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><line x1='12' y1='18' x2='52' y2='18' stroke='%23ffffff' stroke-width='4' stroke-linecap='round'/><line x1='12' y1='32' x2='52' y2='32' stroke='%23ffffff' stroke-width='4' stroke-linecap='round'/><line x1='12' y1='46' x2='52' y2='46' stroke='%23ffffff' stroke-width='4' stroke-linecap='round'/></svg>"
+        />
+      </div>
+
+      <table class="playlist-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Album</th>
+            <th>Date Added</th>
+            <th>🕒</th>
+          </tr>
+        </thead>
+        <tbody id="playlist-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- External JS file -->
+  <script src="../js/one_album_view.js"></script>
+</body>
+</html>
