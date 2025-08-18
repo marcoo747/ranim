@@ -13,6 +13,7 @@ body {
 
 .container {
   display: flex;
+  margin-top: 60px;
 }
 
 nav{
@@ -20,7 +21,7 @@ nav{
 }
 
 .sidebar {
-  width: 195px;
+  width: 12.7%;
   background-color: #000;
   padding: 20px;
   height: 100vh;
@@ -61,7 +62,7 @@ nav{
 }
 
 .main {
-  margin-left: 230px; /* Add left margin so content doesn't overlap the sidebar */
+  margin-left: 15%; /* Add left margin so content doesn't overlap the sidebar */
   padding: 20px;
 }
 
@@ -139,3 +140,133 @@ h3{
 .menu-item:hover {
     color: #1db954;
 }
+
+/* Make the top-bar-section appear behind the rest of the page content */
+.top-bar-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background: #282828;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 32px;
+  box-sizing: border-box;
+  z-index: 0; /* Lower z-index means behind other elements */
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+    .top-bar-section .notification {
+      position: relative;
+      margin-right: 24px;
+      cursor: pointer;
+    }
+    .top-bar-section .notification .bell {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+      transition: fill 0.2s;
+    }
+    .top-bar-section .notification .badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: #1db954;
+      color: #fff;
+      font-size: 13px;
+      border-radius: 50%;
+      padding: 2px 7px;
+      font-weight: bold;
+      border: 2px solid #282828;
+    }
+    .top-bar-section .user-photo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid #1db954;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #444;
+      cursor: pointer;
+    }
+    .top-bar-section .user-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+
+/* ...existing code... */
+
+.notification { position: relative; cursor: pointer; }
+
+/* Popup */
+.notif-popup {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 320px;
+  max-width: calc(100vw - 20px);
+  background: #1b1b1b; /* dark background */
+  color: #e6e6e6;      /* light text for contrast */
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  padding: 12px;
+  z-index: 1000;
+  transform-origin: top right;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.notif-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 260px;
+  overflow: auto;
+  margin-bottom: 8px;
+}
+
+.notif-card {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background .12s ease;
+  background: transparent;
+}
+
+.notif-card:hover { background: rgba(255,255,255,0.03); }
+
+.notif-card img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.notif-body strong { display:block; font-size: 14px; color: #fff; }
+.notif-body small { color: #b8b8b8; font-size: 12px; }
+
+.notif-show-more {
+  width: 100%;
+  background: linear-gradient(180deg,#7e56f1,#5b3bba);
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.45);
+}
+
+/* ensure popup hidden when [hidden] attribute present */
+.notif-popup[hidden] { display: none; }

@@ -7,6 +7,46 @@
   <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
+  <!-- ...existing code... -->
+  <div class="top-bar-section">
+    <div class="notification">
+    </div>
+    <div class="notification" id="notif-toggle" aria-haspopup="true" aria-expanded="false">
+      <svg class="bell" viewBox="0 0 24 24" role="img" aria-label="Notifications">
+        <path d="M12 2C8.13 2 5 5.13 5 9v4.5L3.29 16.29c-.63.63-.18 1.71.71 1.71h15a1 1 0 0 0 .71-1.71L19 13.5V9c0-3.87-3.13-7-7-7zm0 20a2.5 2.5 0 0 1-2.45-2h4.9A2.5 2.5 0 0 1 12 22z"/>
+      </svg>
+      <span class="badge" id="notif-badge">3</span>
+
+      <!-- Notification popup -->
+       <div class="notif-popup" id="notif-popup" role="dialog" aria-label="Recent notifications" hidden>
+       <div class="notif-list">
+          <div class="notif-card">
+            <img src="../imgs/bell-fill.png" alt="">            
+        <div class="notif-body">
+                <strong>New playlist: ترانيم قلب دائود</strong>
+                <small>2h ago</small>           
+        </div>         
+      </div>
+          <div class="notif-card">
+              <img src="../imgs/bell-fill.png" alt="">
+              <div class="notif-body">
+                <strong>New follower</strong>
+                <small>5h ago</small>
+            </div>          </div>
+          <div class="notif-card">
+              <img src="../imgs/bell-fill.png" alt="">
+              <div class="notif-body">
+                <strong>Recommendation for you</strong>
+                <small>1d ago</small>
+            </div>          
+          </div>        
+        </div>
+        <button id="show-more-btn" class="notif-show-more">Show more</button>      </div>    </div>
+<!-- ...existing code... -->
+    <div class="user-photo" onclick="alert('Go to profile page!')">
+      <img src="https://avatars.githubusercontent.com/u/9919?s=64" alt="User Photo" />
+    </div>
+  </div>
   <div class="container">
     <!-- Sidebar -->
     <aside class="sidebar">
@@ -16,9 +56,9 @@
       <nav>
         <ul>
           <li><a href="index.html" class="menu-item"><img src="../imgs/image (2).png" class="icons"><span>Home</span></a></li>
-          <li><a href="search.html" class="menu-item"><img src="../imgs/search.png" class="icons"><span>search</span></a></li>
-          <li><a href="library.html" class="menu-item"><img src="../imgs/liberary.png" class="icons"><span>library</span></a></li>
-          <li><a href="notifications.html" class="menu-item"><img src="../imgs/bell-fill.png" class="icons"><span>notifications</span></a></li>
+          <li><a href="search.html" class="menu-item"><img src="../imgs/search.png" class="icons"><span>Search</span></a></li>
+          <li><a href="library.html" class="menu-item"><img src="../imgs/liberary.png" class="icons"><span>Library</span></a></li>
+          <li><a href="notifications.html" class="menu-item"><img src="../imgs/bell-fill.png" class="icons"><span>Notifications</span></a></li>
         </ul>
         <ul>
           <li><img src="../imgs/add.png" alt="" class="icons"> Create Playlist</li>
@@ -102,5 +142,6 @@
       </section>
     </main>
   </div>
+  <script src="../js/home.js"></script>
 </body>
 </html>
