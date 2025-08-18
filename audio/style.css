@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.icons {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.container {
+  display: flex;
+  margin-top: 60px;
+}
+
+nav{
+    margin-bottom: 150%;
+}
+
+.sidebar {
+  width: 195px;
+  background-color: #000;
+  padding: 20px;
+  height: 100vh;
+  position: fixed; /* Keeps the sidebar fixed */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it's on top of other content */
+}
+
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.sidebar .legal,
+.sidebar .language {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.sidebar .legal a {
+  display: block;
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.main {
+  margin-left: 230px; /* Add left margin so content doesn't overlap the sidebar */
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #181818;
+  padding: 15px;
+  border-radius: 8px;
+  width: 180px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card:hover {
+  background-color: #282828;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 0 0 5px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #b3b3b3;
+  margin: 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+
+h3{
+    direction: rtl;
+}
+
+.legal{
+    margin-bottom: 40px;}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between icon and text */
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    color: #1db954;
+}
+
+/* Make the top-bar-section appear behind the rest of the page content */
+.top-bar-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background: #282828;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 32px;
+  box-sizing: border-box;
+  z-index: 0; /* Lower z-index means behind other elements */
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+    .top-bar-section .notification {
+      position: relative;
+      margin-right: 24px;
+      cursor: pointer;
+    }
+    .top-bar-section .notification .bell {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+      transition: fill 0.2s;
+    }
+    .top-bar-section .notification .badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: #1db954;
+      color: #fff;
+      font-size: 13px;
+      border-radius: 50%;
+      padding: 2px 7px;
+      font-weight: bold;
+      border: 2px solid #282828;
+    }
+    .top-bar-section .user-photo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid #1db954;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #444;
+      cursor: pointer;
+    }
+    .top-bar-section .user-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
