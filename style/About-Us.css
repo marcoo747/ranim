@@ -1,0 +1,180 @@
+/* styles.css */
+:root {
+  --bg: #0b0b0f;
+  --text: #e8e8ef;
+  --muted: #a7a7b7;
+  --card: #111219;
+  --ring: 2px;
+  --radius: 22px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(90vw 90vh at 70% -10%, #151524, transparent 60%),
+              radial-gradient(60vw 60vh at -10% 110%, #191924, transparent 50%),
+              var(--bg);
+  color: var(--text);
+}
+
+.page {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 6vh 4vw;
+}
+
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
+
+.team .grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  gap: clamp(16px, 2.6vw, 28px);
+}
+
+@media (max-width: 1200px) {
+  .team .grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .team .grid {
+    grid-template-columns: minmax(260px, 1fr);
+  }
+}
+
+/* CARD */
+.member {
+  --depth: 28px;
+  perspective: 900px;
+  position: relative;
+  padding-top: 58px; /* space for label above the frame */
+}
+
+.member .label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,.14);
+  padding: 10px 18px;
+  border-radius: 999px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.35), 0 0 0 1px rgba(255,255,255,.04) inset;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-align: center;
+  min-width: 210px;
+}
+
+.member .label::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  filter: blur(14px);
+  opacity: .35;
+  z-index: -1;
+}
+
+.member .name {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  font-size: 1rem;
+}
+
+.member .role {
+  font-size: .85rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* FRAME WITH GRADIENT RING */
+.frame {
+  position: relative;
+  border-radius: var(--radius);
+  padding: var(--ring);
+  background:
+    linear-gradient(#111219, #111219) padding-box,
+    linear-gradient(135deg, var(--accent), var(--accent2)) border-box;
+  box-shadow: var(--shadow), 0 0 0 6px rgba(0,0,0,.25) inset;
+  transform-style: preserve-3d;
+  transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s ease;
+}
+
+.member:hover .frame,
+.member:focus-within .frame {
+  box-shadow: var(--shadow), 0 0 64px 10px color-mix(in oklab, var(--accent) 55%, transparent);
+}
+
+.frame::after {
+  /* subtle inner glow */
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: calc(var(--radius) - 6px);
+  background: radial-gradient(100% 60% at 50% 0%, color-mix(in oklab, var(--accent) 12%, transparent), transparent 60%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+/* IMAGE */
+.frame img {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 42vw, 420px);
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 2px);
+  transform: translateZ(0.01px); /* keep crisp while tilting */
+}
+
+/* TILT transforms (set via JS by CSS variables) */
+.member .frame {
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateZ(0);
+}
+
+/* Focus styles */
+.member:focus-within .label,
+.member:focus-within .frame {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 40%, white 10%);
+}
+
+/* Motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .member .frame {
+    transition: none;
+    transform: none !important;
+  }
+}
+
+/* Nice max-width wrapper on very wide screens */
+.team {
+  width: min(1200px, 96vw);
+  margin-inline: auto;
+}
