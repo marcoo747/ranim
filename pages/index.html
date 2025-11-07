@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+  <body>
+    <!-- ...existing code... -->
+      <div class="mobile-nav">
+      <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html"><img src="../imgs/logo.png" alt="Ranim Logo" /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div
+            class="offcanvas offcanvas-end text-bg-dark"
+            tabindex="-1"
+            id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                Dark offcanvas
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul>
+            <li>
+              <a href="index.html" class="menu-item"
+                ><img src="../imgs/image (2).png" class="icons" /><span
+                  >Home</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="search.html" class="menu-item"
+                ><img src="../imgs/search.png" class="icons" /><span
+                  >Search</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="library.html" class="menu-item"
+                ><img src="../imgs/liberary.png" class="icons" /><span
+                  >Library</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="notifications.html" class="menu-item"
+                ><img src="../imgs/bell-fill.png" class="icons" /><span
+                  >Notifications</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="About-Us.html" class="menu-item" target="_blank"
+                ><img src="../imgs/bell-fill.png" class="icons" /><span
+                  >About us
+                </span></a
+              >
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <img src="../imgs/add.png" alt="" class="icons" /> Create Playlist
+            </li>
+            <li>
+              <img src="../imgs/heart-fill.png" alt="" class="icons" /> Liked
+              Songs
+            </li>
+          </ul>
+        </div>
+        <div class="legal">
+          <a href="#">Legal</a>
+          <a href="#">Privacy Center</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookies</a>
+          <a href="#">About Ads</a>
+        </div>
+        <div class="language">🌐 English</div>
+            
+            </div>
+          </div>
+        </div>
+      </nav>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+      <div class="top-bar-section">
+      <div class="notification"></div>
+      <div
+        class="notification"
+        id="notif-toggle"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <svg
+          class="bell"
+          viewBox="0 0 24 24"
+          role="img"
+          aria-label="Notifications"
+        >
+          <path
+            d="M12 2C8.13 2 5 5.13 5 9v4.5L3.29 16.29c-.63.63-.18 1.71.71 1.71h15a1 1 0 0 0 .71-1.71L19 13.5V9c0-3.87-3.13-7-7-7zm0 20a2.5 2.5 0 0 1-2.45-2h4.9A2.5 2.5 0 0 1 12 22z"
+          />
+        </svg>
+        <span class="badge" id="notif-badge">3</span>
+
+        <!-- Notification popup -->
+        <div
+          class="notif-popup"
+          id="notif-popup"
+          role="dialog"
+          aria-label="Recent notifications"
+          hidden
+        >
+          <div class="notif-list">
+            <div class="notif-card">
+              <img src="../imgs/bell-fill.png" alt="" />
+              <div class="notif-body">
+                <strong>New playlist: ترانيم قلب دائود</strong>
+                <small>2h ago</small>
+              </div>
+            </div>
+            <div class="notif-card">
+              <img src="../imgs/bell-fill.png" alt="" />
+              <div class="notif-body">
+                <strong>New follower</strong>
+                <small>5h ago</small>
+              </div>
+            </div>
+            <div class="notif-card">
+              <img src="../imgs/bell-fill.png" alt="" />
+              <div class="notif-body">
+                <strong>Recommendation for you</strong>
+                <small>1d ago</small>
+              </div>
+            </div>
+          </div>
+          <button id="show-more-btn" class="notif-show-more">Show more</button>
+        </div>
+      </div>
+      <!-- ...existing code... -->
+      <div class="user-photo" onclick="alert('Go to profile page!')">
+        <img
+          src="https://avatars.githubusercontent.com/u/9919?s=64"
+          alt="User Photo"
+        />
+      </div>
+    </div>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="../imgs/logo.png" alt="Ranim Logo" />
+        </div>
+        <div class="nav">
+          <ul>
+            <li>
+              <a href="index.html" class="menu-item"
+                ><img src="../imgs/image (2).png" class="icons" /><span
+                  >Home</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="search.html" class="menu-item"
+                ><img src="../imgs/search.png" class="icons" /><span
+                  >Search</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="library.html" class="menu-item"
+                ><img src="../imgs/liberary.png" class="icons" /><span
+                  >Library</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="notifications.html" class="menu-item"
+                ><img src="../imgs/bell-fill.png" class="icons" /><span
+                  >Notifications</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="About-Us.html" class="menu-item" target="_blank"
+                ><img src="../imgs/bell-fill.png" class="icons" /><span
+                  >About us
+                </span></a
+              >
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <img src="../imgs/add.png" alt="" class="icons" /> Create Playlist
+            </li>
+            <li>
+              <img src="../imgs/heart-fill.png" alt="" class="icons" /> Liked
+              Songs
+            </li>
+          </ul>
+        </div>
+        <div class="legal">
+          <a href="#">Legal</a>
+          <a href="#">Privacy Center</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookies</a>
+          <a href="#">About Ads</a>
+        </div>
+        <div class="language">🌐 English</div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
+        <section class="section">
+          <h2>Focus</h2>
+          <div class="cards">
+            <div class="card">
+              <img src="../imgs/klb daod.jpg" alt="#" />
+              <h3>ترانيم قلب دائود</h3>
+              <p>Relax and indulge with beautiful piano pieces</p>
+            </div>
+            <div class="card">
+              <img src="../imgs/klb daod.jpg" alt="#" />
+              <h3>ترانيم قلب دائود</h3>
+              <p>Keep calm and focus with ambient and post-...</p>
+            </div>
+            <div class="card">
+              <img src="../imgs/klb daod.jpg" alt="#" />
+              <h3>ترانيم قلب دائود</h3>
+              <p>Focus with soft study music in the background</p>
+            </div>
+            <div class="card">
+              <img src="../imgs/klb daod.jpg" alt="J#" />
+              <h3>ترانيم قلب دائود</h3>
+              <p>The original chill instrumental beats playlist</p>
+            </div>
+            <div class="card">
+              <img src="../imgs/klb daod.jpg" alt="#" />
+              <h3>ترانيم قلب دائود</h3>
+              <p>Uptempo instrumental hip hop beats</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Spotify Playlists</h2>
+          <div class="cards">
+            <div class="card">
+              <img src="../imgs/klb daod.jpg" alt="ترانيم قلب دائود" />
+              <h3>ترانيم قلب دائود</h3>
+              <p>Ed Sheeran is on top of the Hottest 50!</p>
+            </div>
+            <div class="card">
+              <img src="../imgs/klb daod.jpg" alt="ترانيم قلب دائود" />
+              <h3>ترانيم قلب دائود</h3>
+              <p>New music from Roddy Ricch, Kodak Black...</p>
+            </div>
+            <div class="card">
+              <img src="../imgs/klb daod.jpg" alt="ترانيم قلب دائود" />
+              <h3>ترانيم قلب دائود</h3>
+              <p>The biggest songs of the 2010s</p>
+            </div>
+            <div class="card">
+              <img src="../imgs/klb daod.jpg" alt="ترانيم قلب دائود" />
+              <h3>ترانيم قلب دائود</h3>
+              <p>Rock legends & epic songs that continue to...</p>
+            </div>
+            <div class="card">
+              <img src="../imgs/klb daod.jpg" alt="ترانيم قلب دائود" />
+              <h3>ترانيم قلب دائود</h3>
+              <p>Kick back to the best new and recent chill hits</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../js/home.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
